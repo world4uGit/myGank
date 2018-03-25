@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                tools:context="com.rndchina.mygank.shop.frament.ShopHomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tv_nonetwork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网络不给力，请检查网络设置"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:drawableLeft="@drawable/error"
+        android:drawablePadding="6dp"
+        android:padding="12dp"
+        android:background="@color/orange_light"
+        android:textSize="14sp"
+        android:textColor="@color/primary_text"
+        android:visibility="gone"
+        />
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:indicatorColor="?attr/colorPrimary"
+        app:indicatorName="BallSpinFadeLoaderIndicator"
+        />
+    <LinearLayout
+        android:layout_below="@+id/tv_nonetwork"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_catagery"
+            android:layout_width="80dp"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_catagerylist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+
+</RelativeLayout>

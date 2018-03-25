@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3fc2e3</color>
+    <color name="colorPrimaryDark">#339ec7</color>
+    <color name="colorAccent">#3fc2e3</color>
+
+
+    <color name="primary_text">#333333</color>
+    <color name="secondary_text">#cccccc</color>
+    <color name="divider">#e1e1e1</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#f5f5f5</color>
+    <color name="color7979">#797979</color>
+
+    <color name="orange_light">#fec107</color>
+    <color name="black">#212121</color>
+    <color name="jd_welcome_bg">#9D000B</color>
+    <color name="green">#ff009900</color>
+</resources>

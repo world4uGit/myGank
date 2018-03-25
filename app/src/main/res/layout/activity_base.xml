@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:titleTextColor="@color/white">
+            <!--<RelativeLayout-->
+                <!--android:gravity="center"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="?actionBarSize">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/bar_net"-->
+                    <!--android:layout_width="55dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_toLeftOf="@+id/bar_music"-->
+                    <!--android:background="@drawable/actionbar_disco"-->
+                    <!--android:clickable="true" />-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/bar_music"-->
+                    <!--android:layout_width="55dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:background="@drawable/actionbar_music"-->
+                    <!--android:clickable="true" />-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/bar_friends"-->
+                    <!--android:layout_width="55dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_toRightOf="@+id/bar_music"-->
+                    <!--android:background="@drawable/actionbar_friends"-->
+                    <!--android:clickable="true" />-->
+
+            <!--</RelativeLayout>-->
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+    </LinearLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi_loading"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:indicatorColor="?attr/colorPrimary"
+        app:indicatorName="LineScalePartyIndicator"/>
+</RelativeLayout>

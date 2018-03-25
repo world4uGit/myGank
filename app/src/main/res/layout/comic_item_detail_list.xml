@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.came.viewbguilib.ButtonBgUi
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="@dimen/dp_10"
+    android:layout_margin="@dimen/dp_10"
+    android:text="@string/app_name"
+    android:textSize="10sp"
+    app:raoundRadius="5dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/color7979"
+    app:defaultColor="@color/white"
+    app:pressedColor="@color/primary_text"
+    />
+

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+
+    <TextView
+        android:id="@+id/tv_nonetwork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网络不给力，请检查网络设置"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:drawableLeft="@drawable/error"
+        android:drawablePadding="6dp"
+        android:padding="12dp"
+        android:background="@color/orange_light"
+        android:textSize="14sp"
+        android:textColor="@color/primary_text"
+        android:visibility="gone"
+        />
+    <!--<include layout="@layout/discover_divider_layout" />-->
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:indicatorColor="?attr/colorPrimary"
+        app:indicatorName="BallSpinFadeLoaderIndicator"
+        />
+
+    <!-- 头部 -->
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/ad_rl"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="175dp">-->
+
+            <!--<android.support.v4.view.ViewPager-->
+            <!--android:id="@+id/ad_vp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" />-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/ad_indicator"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:background="#8000"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="horizontal" />-->
+            <!--</RelativeLayout>-->
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                app:image_scale_type="center_crop"
+                app:is_auto_play="true"
+               />
+
+            <include layout="@layout/home_child_module"/>
+            <!-- 秒杀 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/clock"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/clock"/>
+
+                <TextView
+                    android:id="@+id/seckill_tip_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@id/clock"
+                    android:text="掌上秒杀"
+                    android:textColor="#F00"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/seckill_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/seckill_tip_tv"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/seckill_tip_tv"
+                    android:textColor="@color/jd_welcome_bg"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:text="更多秒杀 >"
+                    android:textColor="#9B9B9B"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@android:color/white"></android.support.v7.widget.RecyclerView>
+            <!--<com.m520it.jdmall03.ui.HorizontalListView-->
+            <!--android:id="@+id/horizon_listview"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="180dp"-->
+            <!--android:background="@android:color/white" />-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="10dp"
+                android:text="猜你喜欢"
+                android:textColor="#F00"
+                android:textSize="16sp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recommend_gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="2"
+                android:scrollbars="none"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

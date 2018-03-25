@@ -1,0 +1,114 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:leon="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:text="world4U"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:elevation="6dp"
+                android:textColor="@color/white"
+                />
+            
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/me_bg"
+                />
+
+        </FrameLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-70dp"
+            app:cardCornerRadius="50dp"
+            android:elevation="6dp"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/me_head"
+                />
+
+
+        </android.support.v7.widget.CardView>
+
+        <com.leon.lib.settingview.LSettingItem
+            android:id="@+id/setting_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            leon:isShowRightText="true"
+            leon:isShowUnderLine="false"
+            leon:leftIcon="@drawable/me_icon_version"
+            leon:leftText="版本号"
+            leon:leftTextMarginLeft="16dp"
+            leon:rightText="1.0"
+            />
+
+        <com.leon.lib.settingview.LSettingItem
+            android:id="@+id/setting_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            leon:isShowUnderLine="false"
+            leon:leftIcon="@drawable/me_icon_save"
+            leon:leftText="已收藏"
+            leon:leftTextMarginLeft="16dp"
+            leon:rightTextColor="#999999"/>
+
+        <com.leon.lib.settingview.LSettingItem
+            android:id="@+id/setting_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            leon:isShowUnderLine="false"
+            leon:leftIcon="@drawable/me_icon_save"
+            leon:leftText="我的音乐"
+            leon:leftTextMarginLeft="16dp"
+            leon:rightText="V1.0"
+            leon:rightTextColor="#999999"/>
+
+        <com.leon.lib.settingview.LSettingItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            leon:isShowUnderLine="false"
+            leon:leftIcon="@drawable/me_icon_video"
+            leon:leftText="优质视频分享"
+            leon:leftTextMarginLeft="16dp"
+            leon:rightStyle="iconHide"
+            leon:rightText="V1.0"
+            leon:rightTextColor="#999999"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/me_list_vedio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
